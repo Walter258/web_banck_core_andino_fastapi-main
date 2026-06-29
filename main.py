@@ -11,9 +11,15 @@ app = FastAPI(
     version="1.0.0"
 )
 
+origins = [
+    "https://front-core-2.onrender.com",  # Tu NUEVO frontend (el que se ve en la captura)
+    "https://front-core.onrender.com",    # Tu frontend anterior (por si acaso)
+    "http://localhost:3000",              # Para desarrollo local
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # React Vite frontend
+    allow_origins=origins,  # React Vite frontend
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
