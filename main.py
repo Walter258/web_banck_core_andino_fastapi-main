@@ -12,7 +12,8 @@ app = FastAPI(
 )
 
 origins = [
-    "https://front-core-3.onrender.com",  # Tu NUEVO frontend (el que se ve en la captura)
+    "https://front-core-3.onrender.com",
+    "https://front-core-4.onrender.com", # Tu NUEVO frontend (el que se ve en la captura)
     "https://front-core.onrender.com",    # Tu frontend anterior (por si acaso)
     "http://localhost:3000",              # Para desarrollo local
 ]
